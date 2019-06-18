@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1560861793954.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4040485168",
+    "id" : "B1C7A100",
+    "lastKnownWriteTime" : 1560861736,
+    "last_content_update" : 1560861736,
+    "path" : "C:/Users/psj17/GitHub/R/Chapter2/A1.R",
+    "project_path" : "A1.R",
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
