@@ -12,7 +12,7 @@ colours
 
 
 
-# Level parm을 지운다면?
+# Level param을 지울 경우
 colours_noLv = factor(c("red", "blue", "red", "white",
                    "silver", "red", "white", "silver",
                    "red", "red", "white", "silver", "silver"))
@@ -25,7 +25,7 @@ colours_noLv
 
 
 
-# 인자에 "orange"를 넣을 수 있는 방법?
+# 해당 벡터에 "orange"를 삽입하는 방법
 colours_addLv = factor(c("red", "blue", "red", "white",
                    "silver", "red", "white", "silver",
                    "red", "red", "white", "silver", "silver"),
@@ -42,24 +42,25 @@ colours_addLv
 # 학습문제 1-2
 table(colours)
 
-## 해당 factor의 level별 갯수 출력
+## 벡터 Level의 인수별 갯수 출력
 
 
 
-# 새로운 factor 선언
+# 새로운 벡터 선언 (Level 무지정)
 colurs2 = c("red", "blue", "red", "white",
             "silver", "red", "white", "silver",
             "red", "red", "white", "silver")
 table(colurs2)
 
-## 해당 factor의 level별 갯수 출력
+## 벡터의 인수별 갯수 출력
 
 
 
-# factor에 level을 제한하지 않거나 단순 c로 변수를 선언할 경우
-colurs3 = c("red", "blue", "red", "white",
-            "silver", "red", "white", "silver",
-            "red", "red", "white", "뜬금없네")
+# 벡터의 Level에 속하지 않은 인수가 있을 경우
+colurs3 = factor(c("red", "blue", "red", "white",
+                   "silver", "red", "white", "silver",
+                   "red", "red", "white", "silver", "Yellow"),
+                 level = c("red", "blue", "white", "silver", "black"))
 table(colurs3)
 
-## 모든 변수별 갯수 출력
+## Level에 속하지 않는 인수는 무시함
