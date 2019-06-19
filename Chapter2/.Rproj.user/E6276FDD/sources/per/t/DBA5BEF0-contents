@@ -6,24 +6,36 @@ colours = factor(c("red", "blue", "red", "white",
 
 
 
+# table 개념
+table(colours)
+
+## 벡터 Level의 인수별 갯수 출력
+
+
+
+# 새로운 벡터 선언 (Level 무지정)
+colours2 = c("red", "blue", "red", "white",
+            "silver", "red", "white", "silver",
+            "red", "red", "white", "silver")
+table(colours2)
+
+## 벡터의 인수별 갯수 출력
+
+
+
+# 벡터의 Level에 속하지 않은 인수가 있을 경우
+colours3 = factor(c("red", "blue", "red", "white",
+                   "silver", "red", "white", "silver",
+                   "red", "red", "white", "silver", "Yellow"),
+                 level = c("red", "blue", "white", "silver", "black"))
+table(colours3)
+
+## Level에 속하지 않는 인수는 무시함
+
+
 
 # 학습문제 2
-car.type = factor(c("saloon", "saloon", "hatchback", "saloon",
-                    "convertible", "hatchback", "convertible", "saloon",
-                    "hatchback", "saloon", "saloon", "saloon", "hatchback"),
-                  level = c("saloon", "hatchback", "convertible"))
-table(car.type, colours)
+table(colours)
+table(colours2)
 
-## 각 인자끼리 매칭되는 값을 행렬로 출력
-
-
-
-# 만약 길이가 다르다면?
-car.type = factor(c("saloon", "saloon", "hatchback", "saloon",
-                    "convertible", "hatchback", "convertible", "saloon",
-                    "hatchback", "saloon", "saloon", "saloon"),
-                  level = c("saloon", "hatchback", "convertible"))
-table(car.type, colours)
-
-## Error, 반드시 인자끼리의 1:1 매칭이 전제조건
-
+## Level param이 지정된 경우 해당 Level 인수에 한하여 Count
