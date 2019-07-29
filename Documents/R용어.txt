@@ -1,0 +1,175 @@
+===================================
+               2장
+===================================
+
+x**2
+- 제곱
+
+sum(x)
+- 합계
+
+max(x)
+- 최대값
+
+sqrt(x)
+- 제곱근
+
+rownames(x)
+- 해당 행의 이름
+
+colnames(x)
+- 해당 열의 이름
+
+rowSums(x)
+- 각 행의 합계
+
+colSums(x)
+- 각 열의 합계
+
+colMeans(x)
+- 열값의 평균
+
+diag(x)
+- 주 대각선, 선행 대각선
+
+rnorm(n, mean, sd)
+- 무작위 표준분포
+  n    : 난수 갯수
+  mean : 난수의 평균
+  sd   : 표준 편차
+
+plot(x, y, pch, col, type, lwd, xlim, ylim, lty, asp, xlab, ylab)
+- 그래프 작성 함수
+  x,y        : 좌표
+  pch        : 점의 모양
+  col        : 색
+  type       : 그래프 타입 (ex. 점)
+  lwd        : 선 두께
+  xlim, ylim : 그래프 범위
+  lty        : 선의 종류
+  aps        : 종횡비
+  xlab, ylab : x, y축의 이름
+
+seq(n, m, len)
+- 수열 생성
+  n   : 시작점
+  m   : 끝점
+  len : 수열의 갯수
+
+par(mfrow)
+- 그래프 표출 방식 지정
+
+rgb(r, g, b, t)
+- 색상 팔레트
+  r = 적색
+  g = 녹색
+  b = 청색
+  t = 투명도
+
+runif(n, m, i)
+- 무작위 균등분포
+  n = 총 갯수
+  m = 시작점
+  i = 끝점
+
+locator()
+- 좌표 찾는 함수
+
+getwd()
+- 해당 R Project의 Working Directory 확인 함수
+
+head(x)
+- 첫 6행 확인
+
+write.csv(x, file)
+- Working Directory에 .csv파일 생성
+
+read.csv(file)
+- .csv파일 읽기
+
+save(list, file)
+- Working Directory에 R 데이터파일 저장
+
+load(file)
+- R 데이터 파일 읽기
+
+===================================
+               3장
+===================================
+
+map.scale(pos1, pos2, length, name, count, size)
+- R에서 생성한 지도 데이터에 축적선을 추가하는 함수
+  pos1,2 : 축적선이 표시되는 위치의 중심 좌표
+  length : 축적선의 길이 (해당 데이터 지도의 단위를 따라감)
+  name   : 축적선의 이름
+  count  : 축적 구분선의 총 갯수
+  size   : 단위 구분선의 길이
+
+miles2ft(num)
+- 거리단위 Miles를 Fit단위로 변환하는 함수
+  num : Fit로 변환할 Miles의 값
+  
+north.arrow(pos1, pos2, length, color)
+- R에서 생성한 지도 데이터에 북향 화살표를 추가하는 함수
+  pos1,2 : 화살표가 표시되는 위치의 중심 좌표
+  length : 화살표의 길이 (해당 데이터 지도의 단위를 따라감)
+  color  : 화살표의 색
+
+SpatialPoints
+- 불특정 공간에 포함된 Point를 포함하는 Class
+  coords      : 각 점의 좌표를 포함하는 행렬 파라미터
+  bbox        : 데이터의 경계좌표를 포함하는 행렬 파라미터
+  proj4string : string 데이터 형식의 좌표값
+
+SpatialLines
+- 공간의 Line을 포함하는 Class
+  lines       : Lines Class를 포함하는 리스트 파라미터
+  bbox        : 데이터의 경계좌표를 포함하는 행렬 파라미터
+  proj4string : string 데이터 형식의 좌표값
+  
+SpatialPolygons
+- 다각형 토폴로지를 포함하는 Class (속성정보 제외)
+  polygons    : Polygons Class를 포함하는 리스트 파라미터
+  plotOrder   : 객체가 그려지는 순서를 나타내는 정수배열
+  bbox        : 데이터의 경계좌표를 포함하는 행렬 파라미터
+  proj4string : string 데이터 형식의 좌표값
+
+SpatialLinesDataFrame
+- 공간 Point의 속성을 포함하는 Class
+  data        : 속성 데이터를 포함하는 data.frame
+  coords      : 각 점의 좌표를 포함하는 행렬 파라미터
+  coords.nrs  : TRUE일 경우, 해당 좌표를 data.frame에서 검색 및 제거함
+  bbox        : 데이터의 경계좌표를 포함하는 행렬 파라미터
+  proj4string : string 데이터 형식의 좌표값
+
+SpatialLinesDataFrame
+- 공간 Lines의 속성을 포함하는 Class
+  data        : 속성 데이터를 포함하는 data.frame
+  lines       : Lines Class를 포함하는 리스트 파라미터
+  bbox        : 데이터의 경계좌표를 포함하는 행렬 파라미터
+  proj4string : string 데이터 형식의 좌표값
+
+SpatialPolygonsDataFrame
+- 공간 Polygons의 속성을 포함하는 Class
+  data        : 속성 데이터를 포함하는 data.frame
+  polygons    : Polygons Class를 포함하는 리스트 파라미터
+  plotOrder   : 객체가 그려지는 순서를 나타내는 정수배열
+  bbox        : 데이터의 경계좌표를 포함하는 행렬 파라미터
+  proj4string : string 데이터 형식의 좌표값
+
+SpatialGridDataFrame
+- 해당 Grid 위치의 속성을 포함하는 Class
+  grid        : GridTopology Class를 포함하는 파라미터
+  bbox        : 데이터의 경계좌표를 포함하는 행렬 파라미터
+  proj4string : string 데이터 형식의 좌표값
+  data        : 속성 데이터를 포함하는 data.frame
+
+SpatialPixelDataFrame
+- 해당 Grid 위치의 속성을 포함하는 Class
+  bbox        : 데이터의 경계좌표를 포함하는 행렬 파라미터
+  proj4string : string 데이터 형식의 좌표값
+  coords      : 각 점의 좌표를 포함하는 행렬 파라미터
+  coords.nrs  : TRUE일 경우, 해당 좌표를 data.frame에서 검색 및 제거함
+  grid        : GridTopology Class를 포함하는 파라미터
+  grid.index  : 리스트의 Point 데이터를 Grid Point로 색인화하는 정수 파라미터
+  data        : 속성 데이터를 포함하는 data.frame
